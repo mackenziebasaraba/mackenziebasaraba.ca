@@ -1,0 +1,31 @@
+baseURL = 'https://mackenziebasaraba.ca/'
+languageCode = 'en-ca'
+title = 'MacKenzie-Basaraba'
+
+
+[params]
+    incomingpages = "Incoming pages:"
+    outgoing = "Outgoing pages:"
+    sitetitle = "pmb"
+
+enableGitInfo = true
+[frontmatter]
+    lastmod = ["lastmod", ":fileModTime", ":git", "publishDate"]
+
+[params.author]
+    name = 'Peter MacKenzie-Basaraba'
+    email = 'peter@mackenziebasaraba.ca'
+[menu]
+    [[menu.main]]
+        name = "Archive"
+        pageref = "/archive"
+        weight = "1"
+    [[menu.main]]
+        name = "About"
+        pageref = "/about"
+        weight = "2"
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 5
+    ordered = false
