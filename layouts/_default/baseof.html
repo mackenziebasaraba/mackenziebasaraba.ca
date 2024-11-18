@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" colour-mode="light">
+    <head>
+        <title>{{ if not .IsHome }}{{ .Title | title }} &mdash; {{ end }}{{ .Site.Title }}</title>
+        <link rel="canonical" href="{{ .Site.BaseURL }}">
+        <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}'s RSS Feed" href="/index.xml">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="icon" href="/images/icon-small.png">
+        <meta name="author" content="{{ .Params.author }}">
+        <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+        <meta name="keywords" content='{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta charset="utf-8">
+        <meta property="og:title" content="{{ .Title }}">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="{{ .Site.Title }}">
+        <meta property="og:url" content="{{ .Permalink }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li id="site-title"><a href="/">{{ .Site.Params.sitetitle }}</a></li>
+                    {{- $currentParent := . -}}
+                    {{- range .Site.Menus.main -}}
+                    {{- if $currentParent.IsMenuCurrent .Menu . -}}
+                    <li class="active"><a class="active" aria-current="true" href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{- else if $currentParent.HasMenuCurrent .Menu . -}}
+                    <li class="active"><a class="active" aria-current="true" href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{- else -}}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{- end -}}
+                    {{- end -}}
+                    <button type="button" class="header__themeToggle" data-theme-toggle aria-label="Select light theme."><li>theme</li></button>
+                    <li><a href="/index.xml">rss</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {{- block "main" . -}}
+            {{- end -}}
+        </main>
+        <footer id="copyright">
+        </footer>
+    </body>
+    <script>
+{{ partial "js/themepicker.js" . | safeJS }}
+{{ partial "js/footer.js" . | safeJS }}
+    </script>
+    {{- block "script" . -}}
+    {{- end -}}
+</html>
