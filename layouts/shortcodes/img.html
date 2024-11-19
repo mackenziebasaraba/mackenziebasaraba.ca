@@ -1,0 +1,54 @@
+{{- $imgBase := "/images/" -}}
+{{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
+{{- $actualImg := $src -}}
+{{- $sizes := .Get "sizes" -}}
+{{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
+{{- $alt := .Get "alt" -}}
+{{- $type := .Get "type" -}}
+{{- $class := .Get "class" -}}
+{{- $tags := .Get "tags" -}}
+{{- $figclass := .Get "figclass" -}}
+{{- $caption := .Get "caption" -}}
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+{{- $holder := default "GIP" (.Get "holder") -}}
+{{- $hint := default "photo" (.Get "hint") -}}
+{{- $filter := default "MitchellNetravali" (.Get "filter") -}}
+{{- $dataSizes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- if $src -}}
+{{- if eq $type "figure" -}}
+<figure{{ if $figclass }}class="{{ $figclass }}"{{ end }}>
+{{- else if eq $type "overlay" -}}
+<div class="item {{ $tags }}">
+{{- end -}}
+        <a href="{{ $actualImg.RelPermalink }}">
+            <picture>
+                <source type="image/webp" srcset="
+                    {{- with $respSizes -}}
+                    {{- range $i, $e := . }}
+                    {{- if ge $src.Width . -}}
+                    {{- if $i }}, {{ end -}}{{- ($src.Process (print "resize " . "x webp " $hint " " $filter) ).RelPermalink }} {{ . }}w    
+                    {{- end -}}
+                    {{- end -}}
+                    {{- end -}}" sizes="{{ $dataSizes }}" />
+                <source type="image/jpeg" srcset="
+                    {{- with $respSizes -}}
+                    {{- range $i, $e := . }}
+                    {{- if ge $src.Width . -}}
+                    {{- if $i }}, {{ end -}}{{- ($src.Process (print "resize " . "x jpg " $filter) ).RelPermalink }} {{ . }}w
+                    {{- end -}}
+                    {{- end -}}
+                    {{- end -}}" sizes="{{ $dataSizes }}" />
+                <img {{ with $class }}class="{{ $class }}" {{ end }}src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
+            </picture>
+        </a>
+{{- if eq $type "figure" -}}
+    <figcaption>{{ $caption }}</figcaption>
+</figure>
+{{- else if eq $type "overlay" -}}
+    <div class="overlay"><div class="info shadow"><p><b>{{ $title }}</b></p><p>{{ $subtitle }}</p></div></div>
+</div>
+{{- end -}}
+{{- else -}}
+<p><em>Image unavailable.</em></p>
+{{- end -}}
