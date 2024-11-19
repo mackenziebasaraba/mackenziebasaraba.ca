@@ -2,4 +2,4 @@
 {{- $book := .Get "book" -}}
 {{- $author := .Get "author" -}}
 {{- $href := .Get "href" -}}
-<a id="external" target="_blank" href="{{ $href }}">{{ if $book }}<i>{{ $book }}</i>{{ else }}{{ $title }}{{ end }}{{ if $author }} &ndash; {{ $author }}{{ end }}</a>
+<a class="external" target="_blank" href="{{ $href }}">{{ if $book }}<i>{{ $book }}</i>{{ else }}{{ $title }}{{ end }}{{ if $author }} &ndash; {{ $author }}{{ end }}</a>

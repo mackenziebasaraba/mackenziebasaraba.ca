@@ -1,0 +1,163 @@
+:root {
+    --white-0:#f7f6f5;
+    --white-1:#f0edec;
+    --white-2:#e1dcda;
+    --white-3:#ddd6d3;
+    --white-4:#cfc1ba;
+    --black-1:#1c1917;
+    --black-2:#25211f;
+    --black-3:#302b29;
+    --black-4:#1f1f28;
+    --red-1:#de6e7c;
+    --red-2:#cb7a83;
+    --red-3:#3e2225;
+    --red-4:#a8334c;
+    --red-5:#94253e;
+    --purple-1:#bf8fb5;
+    --purple-2:#65435e;
+    --purple-3:#7b3b70;
+    --blue-1:#6099c0;
+    --blue-2:#66a5ad;
+    --green-1:#819b69;
+    --green-2:#4f6c31;
+    --green-3:#3f5a22;
+}
+
+[color-mode="light"] {
+    colour-scheme: light;
+    colour-swap: dark;
+    --bg: var(--white-0);
+    --bg-2: var(--white-2);
+    --txt: var(--black-2);
+    --hdr: var(--black-1;
+}
+
+[colour-mode="dark"] {
+    colour-scheme: dark;
+    colour-swap: light;
+    --bg: var(--black-2);
+    --bg-2: var(--black-1);
+    --text: var(--white-3);
+    --hdr: var(--white-1);
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--bg);
+    text-rendering: optimizeLegibility;
+    background-attachment: fixed;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 0;
+}
+
+* {
+    margin-bottom: 0.938rem;
+}
+
+h1, h2, h3 {
+    color: var(--hdr);
+    height: max-content;
+    display: block;
+}
+
+h4 {
+    display: inline;
+    font-size: 1.2rem;
+    color: var(--hdr);
+}
+
+b {
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
+}
+
+em {
+    font-style: oblique;
+}
+
+a {
+    color: var(--header);
+}
+
+a:hover, a:hover > * {
+    color: var(--highlight);
+    background-color: var(--headr);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+q {
+    display: block;
+    color: var(--header);
+    max-width: 25rem;
+    font-family: italic;
+    font-weight: 600;
+}
+
+cite {
+    display: block;
+    clear: both;
+}
+
+cite:before {
+    content: "- "
+}
+
+kbd {
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 0 0.313rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    line-height: 20px;
+    border: 2px solid var(--text);
+}
+
+table td {
+    vertical-align: top;
+    padding: 0.156rem 0.313rem;
+    text-align: left;
+}
+
+.text-email q {
+    font-family: monospace;
+    max-width: 60ch;
+}
+
+.text-email .subject:after {
+    max-width: 22ch;
+    white-space: nowrap;
+    content:
+        "========================================"
+        "========================================"
+        "========================================"
+        "========================================"
+        "========================================"
+        "========================================"
+        "========================================"
+}
+
+.text-email span {
+    color: var(--email-quote);
+}
+
+.email span:before {
+    content: ">";
+}
+
+.shadow {
+	border: solid 2px black;
+	box-shadow: 5px 5px  black;
+}
+
+.external {
+    text-decoration-style: dotted;
+}
