@@ -41,12 +41,12 @@
             {{- block "main" . -}}
             {{- end -}}
         </main>
-        <footer id="copyright">
+        <footer>
+            {{ partial "footer.html" . }}
         </footer>
     </body>
     <script>
-{{ partial "js/themepicker.js" . | safeJS }}
-{{ partial "js/footer.js" . | safeJS }}
+    {{ partial "js/themepicker.js" . | safeJS }}
     </script>
     {{- block "script" . -}}
     {{- end -}}
