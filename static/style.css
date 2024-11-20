@@ -23,13 +23,13 @@
     --green-3:#3f5a22;
 }
 
-[color-mode="light"] {
+[colour-mode="light"] {
     colour-scheme: light;
     colour-swap: dark;
     --bg: var(--white-0);
     --bg-2: var(--white-2);
     --txt: var(--black-2);
-    --hdr: var(--black-1;
+    --hdr: var(--black-1);
 }
 
 [colour-mode="dark"] {
@@ -37,8 +37,8 @@
     colour-swap: light;
     --bg: var(--black-2);
     --bg-2: var(--black-1);
-    --text: var(--white-3);
-    --hdr: var(--white-1);
+    --txt: var(--white-3);
+    --hdr: var(--white-0);
 }
 
 body {
@@ -50,6 +50,11 @@ body {
     font-size: 1.2rem;
     line-height: 1.2rem;
     margin: 0;
+}
+
+main {
+    max-width: 50rem;
+    margin: auto;
 }
 
 * {
@@ -66,6 +71,11 @@ h4 {
     display: inline;
     font-size: 1.2rem;
     color: var(--hdr);
+}
+
+p {
+    max-width: clamp(45ch, 100%, 75ch);
+    line-height: 1.8rem;
 }
 
 b {
