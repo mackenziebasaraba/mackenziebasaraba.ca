@@ -1,0 +1,6 @@
+{{- define "main" -}}
+{{ .Content }}
+{{- end -}}
+{{- define "script" -}}
+{{ partial "js/redirecttohome.js" . | safeJS }}
+{{- end -}}
