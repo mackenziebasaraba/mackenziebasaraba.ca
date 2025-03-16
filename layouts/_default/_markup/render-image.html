@@ -1,0 +1,19 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+{{- $small := .Page.Resources.GetMatch (printf "%s%s" "small-" (.Destination | safeURL)) -}}
+
+{{ $class := .Attributes.class }}
+{{ $width := .Attributes.width }}
+{{ $alt := .PlainText | safeHTML }}
+
+{{- if $image -}}
+<figure{{ with $class }} class="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}>
+    <picture>
+        <a title="Click to enlarge the image." href="{{ $image.RelPermalink }}">
+            <img src="{{ with $small }}{{ .RelPermalink }}{{ else }}{{ $image.RelPermalink }}{{ end }}" {{ if .Text }} alt="{{ .Text }}" {{ end }} {{ if .Title }} title="{{ .Title }}" {{ end }} loading="lazy" decoding="async">
+        </a>
+    </picture>
+    <figcaption>{{ .Title | markdownify  }}</figcaption>
+</figure>
+{{- else -}}
+<p><em>The image: {{ $image }} is currently unavailable.</em></p>
+{{- end -}}
