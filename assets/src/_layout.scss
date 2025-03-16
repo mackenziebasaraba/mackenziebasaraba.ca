@@ -1,0 +1,58 @@
+@use "functions" as *;
+
+@mixin main-section {
+  max-width: #{$article-width};
+}
+
+$article-width: 730px;
+
+
+main, .top {
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+main {
+  max-width: 1400px
+}
+
+.single, .top {
+  max-width: 1024px;
+}
+
+article {
+  h2, h3, h4, h5, h6, p,
+  ul, ol, li, figure, dl, dd,
+  dt, p {
+    @include main-section;
+  }
+}
+
+.information, .sidenote, .sidenote p {
+  float: right;
+  clear: right;
+  width: 276px;
+  margin-left: 18px;
+  vertical-align: baseline;
+}
+
+/*
+@media only screen and (min-width: 1284px) {
+  main {
+    width: #{$article-width};
+  }
+}
+
+@media only screen and (max-width: 1283px) and (min-width: 940px) {
+  main {
+    width: #{$article-width};
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  main {
+    max-width: #{$article-width};
+  }
+}
+*/

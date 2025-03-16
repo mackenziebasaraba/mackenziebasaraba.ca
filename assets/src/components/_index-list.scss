@@ -1,0 +1,16 @@
+.grid-list {
+  ul {
+    column-count: 2;
+    column-gap: 2em;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-inline-start: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.6em;
+    list-style-type: none;
+  }
+}

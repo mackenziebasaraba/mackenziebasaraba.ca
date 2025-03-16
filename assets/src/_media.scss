@@ -1,0 +1,70 @@
+@use "functions" as *;
+
+picture {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-height: 95vh;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+video {
+  max-height: 80vh;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Image filters
+.invert {
+  filter:
+    invert(1);
+}
+
+.threshhold {
+  filter:
+    brightness(calc(100% + 50%))
+    grayscale(100%)
+    contrast(1000%);
+}
+
+
+@media only screen and (min-width: 720px) {
+  .float-right {
+    float: right;
+    max-width: 250px;
+    padding-left: #{fluid(16px, 18px)};
+  }
+  .side-by-side {
+    max-width: 1440px;
+    display: flex;
+    gap: #{fluid(16px, 18px)};
+    img {
+      max-height: 800px;
+    }
+  }
+  .big-image {
+    max-width: 1440px;
+    text-align: left;
+    img {
+      max-height: 80vh;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// This is an example of a floating caption
+.float-right {
+  figcaption {
+      width: 140px;
+      position: absolute;
+      overflow-wrap: breakword;
+  }
+}
