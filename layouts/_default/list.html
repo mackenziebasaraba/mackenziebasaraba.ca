@@ -1,13 +1,31 @@
 {{- define "main" -}}
+<main>
+    <article>
 <h1>{{ .Title }}</h1>
-<article>
+<p class="subtitle">{{ .Description | markdownify }}</p>
     {{ .Content }}
-</article>
-<section>
-    <ul>
-        {{- range .Pages -}}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}&mdash;{{ .Date }}</a></li>
-        {{- end -}}
-    </ul>
-</section>
+<div class="list-grid">
+    {{ range .Pages }}
+    <div class="list-grid-child">
+        <a href="{{ .RelPermalink }}">
+            {{- if .Param "thumbnail" -}}
+            {{- $thumbnail := .Param "thumbnail" -}}
+            {{- $imgBase := .Page.Path -}}
+            {{- $image := .Page.Resources.GetMatch (printf "%s" $thumbnail) -}}
+            {{- $fallback := $image -}}
+            {{- $holder := "GIP" -}}
+            {{- $hint := "photo" -}}
+            {{- $filter := "MitchellNetravali" -}}
+            {{- $small := .Page.Resources.GetMatch (printf "%s%s" "thumbnail-" $thumbnail) -}}
+            <div class="list-grid-child-img" style="background-image: url({{ ($image.Process (print "resize " 600 "x jpeg " $hint " "  $filter) ).RelPermalink }})"></div>
+            {{- end -}}
+                    <h4 id="{{ .Title }}">{{ with .Params.series }}{{ . | markdownify }}: {{ end }}{{ .Title | markdownify }}</h4>
+        </a>
+        <p>{{ .Description | markdownify }}</p>
+        <p><i>Last edited: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format "January 2, 2006"}}</time></i></p>
+    </div>
+    {{ end }}
+</div>
+    </article>
+</main>
 {{- end -}}
