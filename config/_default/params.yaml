@@ -1,0 +1,13 @@
+Domain: mackenziebasaraba.ca
+author:
+  name: Peter MacKenzie-Basaraba
+  email: peter@mackenziebasaraba.ca
+  url: https://www.mackenziebasaraba.ca/about
+Description: "Occasional rants from a bored prairie-mutt."
+# ========================
+Nonces: true # I have zero clue what this means; I thought "nonce" meant pedophile.
+SiteLive: live
+EmailObfuscation: local
+DeepClone: true
+ShowGitInfo: true
+

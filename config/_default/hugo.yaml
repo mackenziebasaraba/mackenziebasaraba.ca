@@ -1,0 +1,27 @@
+title: MacKenzieBasaraba.ca
+baseURL: https://mackenziebasaraba.ca
+
+disableKinds:
+  - taxonomy
+  - term
+
+enableRobotsTXT: true
+
+enableGitInfo: true
+
+ignoreErrors:
+  - error-remote-getjson
+
+languageCode: en-ca
+
+pagination:
+  pagerSize: 50
+
+rssLimit: 10
+
+summaryLength: 30
+
+
+timeout: "350s"
+
+timeZone: America/Edmonton

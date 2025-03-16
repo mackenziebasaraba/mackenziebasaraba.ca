@@ -1,0 +1,65 @@
+defaultMarkdownHandler: "goldmark"
+goldmark:
+  extensions:
+    extras:
+      insert:
+        enable: true
+      mark:
+        enable: true
+      subscript:
+        enable: true
+      superscript:
+        enable: true
+      delete:
+        enable: true
+    definitionList: true
+    footnote: true
+    strikethrough: true
+    linkify: true
+    linkifyprotocol: https
+    table: true
+    taskList: true
+    typographer:
+      disable: false
+      apostrophe: '&rsquo;'
+      ellipsis: '&hellip;'
+      emDash: '&mdash;'
+      enDash: '&ndash;'
+      leftAngleQuote: '&laquo;'
+      leftDoubleQuote: '&ldquo;'
+      leftSingleQuote: '&lsquo;'
+      rightAngleQuote: '&raquo;'
+      rightDoubleQuote: '&rdquo;'
+      rightSingleQuote: '&rsquo;'
+  parser:
+    autoHeadingID: true
+    autoHeaderIDType: github-ascii
+    wrapStandAloneImageWithinParagraph: false
+    attribute:
+      block: true
+      title: true
+  renderHooks:
+    image:
+      enableDefault: false
+    link:
+      enableDefault: false
+  renderer:
+    unsafe: true
+    hardWraps: false
+    xhtml: false
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: false
+    h1_Lines: ""
+    h1_inline: true
+    lineANchors: ""
+    linenoStart: 1
+    lineNumbersInTable: true
+    noClasses: false
+    tabWidth: 2
+    wrapperClass: highlight
+  tableOfContents:
+    endLevel: 3
+    ordered: true
+    startLevel: 2
