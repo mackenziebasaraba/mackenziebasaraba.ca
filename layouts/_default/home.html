@@ -1,0 +1,54 @@
+{{ define "main" }}
+<main>
+<div class="home-sections">
+  {{/* Add partial "urgent-update.html" as needed. */}}
+  <section>
+    <div id="content-grid">
+      <div class="grid-header">
+        <h2>Recent Posts</h2>
+        <p>A full archive and sorting settings can be viewed <a href="/posts" style="text-decoration: underline">here</a>.</p>
+      </div>
+      {{ range first 7 (where .Site.RegularPages "Section" "posts") }}
+      <div class="post">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .RelPermalink }}/thumbnail.jpg">
+          <h3 class="title">{{ .Title | title }}</h3>
+          <p class="date">[<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-06" }}</time>]</p>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <div id="content-grid">
+      <div class="grid-header">
+        <h2>Programs</h2>
+        <p>A full listing of my programs can be viewed <a href="/programs" style="text-decoration: underline">here</a>.</p>
+      </div>
+      {{ range first 3 (where .Site.RegularPages "Section" "programs") }}
+      <div class="post">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .RelPermalink }}/thumbnail.jpg">
+          <h3 class="title">{{ .Title | title }}</h3>
+          <p class="date">[<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-06" }}</time>]</p>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <div id="content-grid">
+      <div class="grid-header">
+        <h2>Photos</h2>
+        <p>A gallery of my photos can be viewed <a href="/programs" style="text-decoration: underline">here</a>.</p>
+      </div>
+      {{ range first 3 (where .Site.RegularPages "Section" "photos") }}
+      <div class="post">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .RelPermalink }}/thumbnail.jpg">
+          <h3 class="title">{{ .Title | title }}</h3>
+          <p class="date">[<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-06" }}</time>]</p>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</div>
+</main>
+{{ end }}
