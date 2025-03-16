@@ -1,0 +1,14 @@
+{{- $src := .Get "src"  -}}
+{{- $caption := .Get "caption" -}}
+
+{{- if $src -}}
+<figure>
+    <video controls>
+        <source src="{{ $src }}" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+    {{ with $caption }}<figcaption>{{ $caption | markdownify }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<p><em>Video unavailable.</em></p>
+{{- end -}}

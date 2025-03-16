@@ -1,0 +1,9 @@
+{{- $quote := .Get "q" -}}
+{{ $author := .Get "cite" }}
+<div class="quote">
+<blockquote>
+<p>&ldquo;{{ $quote | safeHTML }}&rdquo;</p>
+</blockquote>
+{{- if $author -}}<cite>{{ $author | safeHTML }}</cite>{{- end -}}
+</div>
+
