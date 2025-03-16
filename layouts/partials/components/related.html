@@ -1,0 +1,14 @@
+{{ $data := .Site.RegularPages.RelatedIndices . "tags" "date" }}
+{{ $related := first 5 (where $data "Section" "in" .Site.Params.feed_sections) }}
+{{ with $related }}
+<div class="notify special related">
+    <div class="content">
+        <p>{{ i18n "RelatedPosts2" }}:</p>
+        <ul>
+            {{ range . }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title | title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}

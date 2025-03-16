@@ -1,0 +1,17 @@
+<link rel="canonical" href="{{ .Site.BaseURL }}">
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}'s RSS Feed" href="/index.xml">
+<link rel="icon" href="/images/icon-small.png">
+<meta charset="utf-8">
+<meta name="author" content="{{ .Params.author }}">
+<meta name="description" content="{{ with .Params.description }}{{ . | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+<meta name="keywords" content='{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ $css := resources.Get "style.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" type="text/css" media="screen" integrity="{{ $css.Data.Integrity }}">
+{{ $print := resources.Get "print.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $print.RelPermalink }}" type="text/css" media="print" integrity="{{ $css.Data.Integrity }}">
