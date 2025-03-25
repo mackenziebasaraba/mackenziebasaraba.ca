@@ -1,54 +1,68 @@
 @use "functions" as *;
+@use "fonts" as *;
+@mixin font-header {
 
-@mixin header-text {
-  font-family: var(--paragraph-font);
 }
 
 @mixin normal-text {
-  font-size: #{fluid(16px, 20px)};
-  font-family: var(--paragraph-font);
+  font-size: #{fluid(16px, 19px)};
 }
 
 @mixin small-text {
-  font-size: #{fluid(12px, 15px)};
-  font-family: var(--paragraph-font);
+  font-size: #{fluid(12px, 14px)};
+  line-height: 1.4;
 }
 
-$line-height-regular: 1.6;
-$line-height-small: 1.2;
+$line-height-heading: 1.2;
 
-h2, h3, h4, h5, h6 {
-  @include header-text;
-  font-style: italic;
+h2, h3 {
   font-weight: bold;
+  line-height: #{$line-height-heading};
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: var(--header-text);
 }
 
 h1 {
-  font-size: #{fluid(24px, 40.0px)};
-  font-weight: bold;
-  margin-top: 4rem;
+  font-size: #{fluid(24px, 40px)};
+  margin-top: 3rem;
+  font-family: var(--header-font);
+  font-weight: normal;
 }
 
 h2 {
   font-size: #{fluid(20.9659px, 26.6983px)};
+  margin-top: 2.5rem;
 }
 
 h3 {
   font-size: #{fluid(18.3154px, 21.9219px)};
+  margin-top: 2rem;
 }
 
-h4 {
-  font-size: #{fluid(16px, 18px)};
-}
-
-p, blockquote, del, dfn, q, dl, dt, dd,
-ol, ul, li, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td {
+p, blockquote, del, dfn, q, dl, dt, dd, ol, ul, li, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td {
   @include normal-text;
 }
 
+p {
+  word-spacing: -0.05em;
+}
+
+.prose {
+  p + p {
+    text-indent: 0.5in;
+  }
+
+  p:has(+ p) {
+    margin-bottom: 0;
+  }
+}
 strong, dt {
   font-weight: bold;
+  color: var(--header-text);
 }
 
 em, blockquote, cite {
@@ -56,50 +70,31 @@ em, blockquote, cite {
 }
 
 a {
-  text-decoration: underline;
-  color: var(--body-text);
-}
+  color: var(--hyperlink);
 
-article table {
-  @include small-text;
-  border-spacing: #{fluid(16px, 30px)} #{fluid(16px, 18px)};
-  > * {
-    vertical-align: top;
-  }
-  thead, tbody {
-    tr {
-      border-bottom: 1px solid var(--body-text);
-
-      &:nth-child(even) {
-        background-color: gray;
-      }
-    }
-  }
-  thead {
-    tr {
-      th {
-        text-align: left;
-        font-weight: bold;
-        background-color: var(--body-text);
-        color: var(--background);
-      }
-    }
-  }
-  tbody {
-    tr {
-    }
-    td {
-
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }
 
 .external {
-  text-decoration-style: dotted;
+  text-decoration: dotted;
 }
 
-abbr {
-  font-family: var(--header-font);
+blockquote {
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  // maybe add a border, we'll see.
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
 }
 
 figure {
@@ -108,34 +103,4 @@ figure {
 
 figcaption {
   @include small-text;
-}
-
-ul, ol, dd {
-  padding-inline-start: #{fluid(32px, 36px)};
-}
-
-li p {
-  margin: 0;
-}
-
-p, h1, h2, h3, h4, h5, h6, li, dd, dt, figcaption {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-}
-
-article hr {
-  border: none;
-  &:before {
-    content: '***';
-    display: block;
-    text-align: center;
-  }
-}
-
-.information {
-  ul, ol, li, p {
-    @include small-text;
-  }
 }
