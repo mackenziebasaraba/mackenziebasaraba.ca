@@ -3,6 +3,8 @@
 
 #content-grid {
   display: grid;
+  padding-left: 10%;
+  padding-right: 10%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 0.5rem;
   grid-auto-rows: auto;
