@@ -17,24 +17,24 @@ $line-height-heading: 1.2;
 
 h2, h3 {
   font-weight: bold;
+  font-style: italic;
   line-height: #{$line-height-heading};
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-align: center;
   color: var(--header-text);
 }
 
 h1 {
   font-size: #{fluid(24px, 40px)};
-  margin-top: 3rem;
+  margin-top: 4rem;
   font-family: var(--header-font);
   font-weight: normal;
 }
 
 h2 {
   font-size: #{fluid(20.9659px, 26.6983px)};
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
 }
 
 h3 {
@@ -47,19 +47,6 @@ caption, tbody, tfoot, thead, tr, th, td {
   @include normal-text;
 }
 
-p {
-  word-spacing: -0.05em;
-}
-
-.prose {
-  p + p {
-    text-indent: 0.5in;
-  }
-
-  p:has(+ p) {
-    margin-bottom: 0;
-  }
-}
 strong, dt {
   font-weight: bold;
   color: var(--header-text);
@@ -83,24 +70,15 @@ a {
 
 blockquote {
   font-style: italic;
-  margin: 1.5rem 0;
-  padding-left: 1rem;
-  // maybe add a border, we'll see.
-}
-
-ul, ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-section {
-  margin-bottom: 3rem;
 }
 
 figure {
   text-align: center;
 }
 
-figcaption {
+figcaption,
+.sidenote,
+.marginnote,
+.table-of-contents {
   @include small-text;
 }

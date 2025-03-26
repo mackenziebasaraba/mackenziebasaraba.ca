@@ -1,58 +1,213 @@
-@use "functions" as *;
+.prose-page {
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12.5%;
+  max-width: 1400px;
+  counter-reset: sidenote-counter;
 
-@mixin main-section {
-  max-width: #{$article-width};
-}
+  article {
+    padding: 5rem 0rem;
+  }
 
-$article-width: 730px;
+  section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 
+  blockquote > p {
+    width: 55%;
+    margin-right: 40px;
+  }
 
-main, .top {
-  margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+  h1 {
+    width: 75%;
+  }
 
-main {
-  max-width: 1400px
-}
+  h2, h3 {
+    width: 55%;
+  }
 
-.single, .top {
-  max-width: 1024px;
-}
+  section > p,
+  section > table {
+    width: 55%;
+  }
 
-article {
-  h2, h3, h4, h5, h6, p,
-  ul, ol, li, figure, dl, dd,
-  dt, p {
-    @include main-section;
+  section > dl,
+  section > ol,
+  section > ul {
+    width: 50%;
+    -webkit-padding-start: 5%;
+    padding-inline-start: 5%;
+  }
+
+  dt:not(:first-child),
+  li:not(:first-child) {
+    margin-top: 0.25rem;
+  }
+
+  figure {
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    max-width: 55%;
+  }
+
+  figcaption {
+    text-align: center;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section > img {
+    width: 100%;
+  }
+
+  .sidenote,
+  .marginnote,
+  .table-of-contents {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+    position: relative;
+  }
+
+  .sidenode-number {
+    counter-increment: sidenote-counter;
+  }
+
+  .sidenote-number:after,
+  .sidenote:before {
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  .sidenote-number:after {
+    counter: counter(sidenote-counter);
+    top: -0.5rem;
+    left: 0.1rem;
+  }
+
+  .sidenote:before {
+    content: counter(sidenote-counter) " ";
+    top: -0.5rem;
+  }
+
+  blockquote .sidenote,
+  blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left;
+  }
+
+  div.full-width,
+  table.full-width,
+  code {
+    width: 100%;
+  }
+
+  div.table-wrapper {
+    ovetflow-x: autp;
+  }
+
+  code, pre > code {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  pre.full-width > code {
+    width: 90%;
+  }
+
+  .full-width {
+    max-width: 90%;
+    clear: both;
   }
 }
 
-.information, .sidenote, .sidenote p {
-  float: right;
-  clear: right;
-  width: 276px;
-  margin-left: 18px;
-  vertical-align: baseline;
-}
-
-/*
-@media only screen and (min-width: 1284px) {
-  main {
-    width: #{$article-width};
+@media (max-width: 1200px) {
+  .prose-page {
+    width: 100%;
+    padding-left: 5%;
   }
 }
 
-@media only screen and (max-width: 1283px) and (min-width: 940px) {
-  main {
-    width: #{$article-width};
+@media (max-width: 1000px) {
+  .prose-page {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h1, h2, h3 {
+      width: 100%;
+    }
+
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+      width: 100%;
+    }
+
+    pre > code {
+      width: 97%
+    }
+
+    section > dl,
+    section > ol,
+    section > ul {
+      width: 90%;
+    }
+
+    figure {
+      max-width: 100%;
+    }
+
+    figcaption,
+    figure.fullwidth figcaption {
+      margin-right: 0%;
+      max-width: none;
+    }
+
+    blockquote {
+      margin-left: 1.5em;
+      margin-right: 0em;
+    }
+
+    blockquote p,
+    blockquote footer {
+      width: 100%;
+    }
+
+    .sidenote,
+    .marginnote {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 }
 
-@media only screen and (max-width: 960px) {
-  main {
-    max-width: #{$article-width};
+@media (max-width: 900px) {
+  .prose-page {
+    width: 88%;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }
-*/
+
+@media (max-width: 800px) {
+  .prose-page {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
