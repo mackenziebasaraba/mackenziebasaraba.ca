@@ -1,60 +1,18 @@
 {{ define "main" }}
-  {{ if .Params.headerimage }}
-  <div class="header-image" style="background-image: url('{{ .RelPermalink }}header-pc.jpg');"></div>
-  {{ end }}
-  <main class="single">
-<header class="article">
-  <h1 id="{{ .Title }}">{{ .Title | title | markdownify }}</h1>
-  {{ with .Params.subtitle }}<h4 class="subtitle">{{ . | humanize }}</h4>{{ end }}
-</header>
-{{ if .Params.outdated }}
-<div class="notify box danger">
-  <p class="title">{{ i18n "outdated" }}</p>
-  <div class="contents">{{ i18n "outdated2" }}</div>
+<div class="prose-page">
+
+  <header>
+    <h1>{{ .Title | title | markdownify }}</h1>
+    <p class="subtitle">{{ if .Params.subtitle }}{{ .Params.subtitle }}{{ if .Params.date }} &ndash; {{ end }}{{ end }}{{ if .Params.date }}{{ .Date.Format "2006-01-06" }}{{ end }}</p>
+  </header>
+
+  <main>
+
+    <article>
+        {{ .Content }}
+    </article>
+
+  </main>
+
 </div>
-{{ end }}
-{{ if .Params.inprogress }}
-<div class="notify box normal">
-  <p class="title">{{ i18n "inprogress" }}</p>
-  <div class="contents"><p>{{ .Params.progressNote | markdownify | humanize }}</p></div>
-</div>
-{{ end }}
-{{ if .Params.disclaimer }}
-<div class="notify box danger">
-  <p class="title">{{ i18n "disclaimer" }}</p>
-  <div class="contents">
-    {{ $disclaimer := .Params.disclaimer }}
-    {{ i18n "disclaimer-$disclaimer" }}
-  </div>
-</div>
-{{ end }}
-<div class="article-grid">
-  <div class="information">
-    <h4>Contents</h4>
-    {{ .TableOfContents }}
-  </div>
-  <article>
-    {{ .Content }}
-  </article>
-</div>
-  {{ if .Params.resources }}
-  <hr>
-  <h3><strong>Resources:</strong></h3>
-  <ul>
-    {{ range $i, $e := .Params.resources -}}
-    {{- if $i -}}{{ end -}}
-    <li>{{ . | markdownify }}</li>
-    {{- end -}}
-  </ul>
-  {{ end }}
-  <p>&ndash;{{ .Site.Params.author.name }}; {{ .Date.Format "January" }} {{  humanize .PublishDate.Day }}, {{ .Date.Format "2006" }}.</p>
-  {{ if .Params.copyright }}
-  {{ partial "components/copyright.html" . }}
-  {{ end }}
-{{ end }}
-{{ define "scripts" }}
-{{ if .Params.comments }}
-{{ partials "script/comments.js" | safeJS }}
-{{ end }}
-</main>
 {{ end }}
