@@ -3,7 +3,7 @@
 
   <header>
     <h1>{{ .Title | title | markdownify }}</h1>
-    <p class="subtitle">{{ if .Params.subtitle }}{{ .Params.subtitle }}{{ if .Params.date }} &ndash; {{ end }}{{ end }}{{ if .Params.date }}{{ .Date.Format "2006-01-06" }}{{ end }}</p>
+    <p class="subtitle">{{ if .Params.subtitle }}{{ .Params.subtitle }}{{ if .Params.date }} &ndash; {{ end }}{{ end }}{{ if .Params.date }}{{ $time := .Params.Date }}{{ $time := time.AsTime $time }}{{ $time.Month }} {{ humanize $time.Day }}, {{ $time.Format "2006" }}{{ end }}</p>
   </header>
 
   <main>
