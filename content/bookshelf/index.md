@@ -51,10 +51,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Kierkegaard, Søren -- *Fear and Trembling and The Sickness Unto Death* <!--BR100.K52-->
 - Coogan, Michael D. -- *The New Oxford Annotated Bible: New Revised Standard Version* <!--BS191.A1 .N48-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## C: Auxiliary Sciences of History
 - Graeber, D. & Wengrow, D -- *The Dawn of Everything: A New History of Humanity* <!--CB19.G73 2023-->
 - Harari, Yuval -- *Sapiens: A Brief History of Humankind* <!--CB113.H4 H3713-->
@@ -63,10 +59,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Morris, Ian -- *War! What Is It Good For? Conflict and the Progress of Civilization from Primates to Robots* <!--CB481.M67-->
 - Acosta, Oscar Zeta -- *The Autobiography of a Brown Buffalo* <!--CT275.A186 A3-->
 - Acosta, Oscar Zeta -- *The Revolt of the Cockroach People* <!--CT275.A186 A3-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## D: World History
 - Evola, Ilulius -- *Revolt Against the Modern World* <!--D16.E8513-->
@@ -96,10 +88,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Chang, Iris -- *The Rape of Nanking: The Forgotten Holocaust of World War II* <!--DS796.N2-->
 - Mao, Tse-Tung -- *Quotations from Chairman Mao Tse-Tung: The Little Red Book* <!--DS778.M3 A5155-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## E: History of the United States of America
 - Thompson, Hunter S. -- *Fear and Loathing on the Campaign Trail ‘72* <!--E859.T52-->
 - Thompson, Hunter S. -- *The Great Shark Hunt: Strange Tales from a Strange Time (Gonzo Papers, Volume 1)* <!--E855.T49-->
@@ -107,17 +95,9 @@ thumbnail: 20250103-bookshelf.JPG
 - Thompson, Hunter S. -- *Songs of the Doomed: More Notes on the Death of the American Dream (Gonzo Papers, Volume 3)* <!--E839.T47-->
 - Thompson, Hunter S. -- *Better Than Sex: Confessions of a Political Junkie (Gonzo Papers, Volume 4)* <!--E884.T46-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## F: History of Canada
 - Grant, George -- *Lament for a Nation: The Defeat of Canadian Nationalism* <!--F1034.G742-->
 - Black, Conrad -- *Rise to Greatness, Volume 1: Colony (1000-1867): The History of Canada From the Vikings to the Present* <!--FC165.B53-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## H: Social Sciences
 - Fisher, Mark -- *Capitalist Realism: Is There No Alternative?* <!--HB501-->
@@ -140,10 +120,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Lenin, Vladimir Ilich -- *State and Revolution* <!--HX314-->
 - Kropotkin, Peter -- *The Conquest of Bread* <!--HX632.K7613-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## J: Political Science
 - Plato -- *Republic* <!--JC71-->
 - Machiavelli, Niccoló -- *The Prince* <!--JC143.M38-->
@@ -152,30 +128,14 @@ thumbnail: 20250103-bookshelf.JPG
 - Mill, John Stuart -- *On Liberty, Utilitarianism and Other Essays* <!--JC585.M62-->
 - Talbot, David -- *The Devil's Chessboard: Allen Dulles, the CIA, and the Rise of America's Secret Government* <!--JK468.I6 T35 2015-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## M: Music
 - Morrissey -- *Autobiography* <!--ML420.M635 A4-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## N: Fine Arts
 - van Gogh, Vincent -- *Dear Theo: The Autobiography of Vincent van Gogh* <!--ND653.G7 A3-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## P: Philology and Linguistics
 - Pinker, Steven -- *The Language Instinct: How the Mind Creates Language* <!--P106.P476-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## PA: Greek and Latin Literature
 - Aeschylus -- *Prometheus Bound* <!--PA3827.P8A352015-->
@@ -183,17 +143,9 @@ thumbnail: 20250103-bookshelf.JPG
 - Homer -- *Odyssey* <!--PA4025.A5 F5-->
 - Ovid -- *Metamorphoses* <!--PA6522.M2M45-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## PE: English Language
 - William, Jr. Strunk -- *The Elements of Style* <!--PE1408.S772-->
 - Zinsser, William -- *On Writing Well: The Classic Guide to Writing Nonfiction* <!--PE1429.Z5-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## PG: Slavic Literature
 - Dostoevsky, Fyodor -- *Notes from Underground* <!--PG3326.Z4-->
@@ -204,10 +156,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Tolstoy, Leo -- *War and Peace* <!--PG3366-->
 - Tolstoy, Leo -- *Anna Karenina* <!--PG3366.A6-->
 - Bulgakov, Mikhail -- *The Master and Margarita* <!--PG3476.B78 M313-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## PL: East Asian Literature
 - Sōseki, Natsume -- *The Gate* <!--PL812.A8M613 2012-->
@@ -228,10 +176,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Murakami, Haruki -- *Norwegian Wood* <!--PL856.U673 N6713-->
 - Murakami, Ryū -- *In the Miso Soup* <!--PL856.U696 L513-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## PN: General Literature
 - Ligotti, Thomas -- *The Conspiracy Against the Human Race: A Contrivance of Horror* <!--PN56.H6 L54-->
 - Davies, Owen -- *Grimoires: A History of Magic Books* <!--PN56.M23 O93-->
@@ -239,10 +183,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Jameson, Fredric -- *Postmodernism or, The Cultural Logic of Late Capitalism (Post-Contemporary Interventions)* <!--PN98.P67 J3-->
 - Stein, Sol -- *Stein on Writing* <!--PN151.S84-->
 - Thompson, Hunter S. -- *Fear and Loathing in Las Vegas: A Savage Journey to the Heart of the American Dream* <!--PN4874.T444 A3-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## PQ: Romance Literature
 - Hugo, Victor -- *Les Misérables* <!--PQ2286.A1 1862B-->
@@ -269,10 +209,6 @@ thumbnail: 20250103-bookshelf.JPG
 - de Cervantes, Miguel -- *Don Quixote* <!--PQ6329.A2-->
 - Bolaño, Roberto -- *2666* <!--PQ8098.O38 A12213-->
 - García Márquez, Gabriel -- *One Hundred Years of Solitude* <!--PQ8180.A73-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## PR: British and Irish Literature
 
@@ -315,10 +251,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Iggulden, Conn -- *Wolf of the Plains* <!--PR6109.G47 G46-->
 - Iggulden, Conn -- *Lords of the Bow* <!--PR6109.G47 G464-->
 - Iggulden, Conn -- *Bones of the Hills* <!--PR6109.G47 G463-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## PS: American Literature
 
@@ -378,10 +310,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Moshfegh, Ottessa -- *My Year of Rest and Relaxation* <!--PS3613.O77936 M9-->
 - Yanagihara, Hanya -- *A Little Life* <!--PS3625.A674-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## PT: German Literature
 - von Goethe, Johann Wolfgang -- *Faust, Part One* <!--PT2026.F2-->
 - von Goethe, Johann Wolfgang -- *Faust, Part Two* <!--PT2026.F2-->
@@ -390,10 +318,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Kafka, Franz -- *The Trial* <!--PT2621.A26 PZ13-->
 - Kafka, Franz -- *The Complete Stories* <!--PT2621.A26 A2-->
 - Bernhard, Thomas -- *Correction* <!--PT2662.E7 K613-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## Q: Science
 - Wilson, E. Bright -- *An Introduction to Scientific Research* <!--Q180.A1 W57 1966-->
@@ -435,10 +359,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Carew, Thomas J. -- *Behavioral Neurobiology: The Cellular Organization of Natural Behaviour* <!--QP360.C347-->
 - Doidge, Norman -- *The Brain That Changes Itself: Stories of Personal Triumph from the Frontiers of Brain Science* <!--QP363.D65-->
 
-{{</section>}}
-
-{{<section>}}
-
 ## R: Medicine
 - Webster, John G. -- *Medical Instrumentation: Application and Design* <!--R856-->
 - Maté, Gabor -- *The Myth of Normal: Trauma, Illness & Healing in a Toxic Culture* <!--RA418.M3272-->
@@ -447,10 +367,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Frankl, Viktor E. -- *The Will to Meaning: Foundations and Applications of Logotherapy* <!--RC480.5-->
 - Eisler, Robert -- *Man Into Wolf: An Anthropological Interpretation of Sadism, Masochism, and Lycanthropy* <!--RC569.V55 E37-->
 - Huxley, Aldous -- *The Doors of Perception and Heaven and Hell* <!--RM666.P48 H9-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## T: Technology
 - Kaczynski, Theodore John -- *Technological Slavery* <!--T14.5-->
@@ -468,10 +384,6 @@ thumbnail: 20250103-bookshelf.JPG
 - Kraft, George D. & Toy, Wing N. -- *Mini/Microcomputer Hardware Design* <!--TK7888.3.K7-->
 - White, Donnamaie E. -- *Bit-Slice Design: Controllers and ALUs* <!--TK7895.M5W49-->
 - Grant, Eugene L. & Leavenworth, Richard S. -- *Statistical Quality Control* <!--TS156.G7 1980-->
-
-{{</section>}}
-
-{{<section>}}
 
 ## ?: Unsorted
 - Blain, Linda -- *Enduring the Empire*
