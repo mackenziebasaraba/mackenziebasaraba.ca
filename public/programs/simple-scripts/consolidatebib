@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+# Consolidates all bib files into a single file.
+cat [abpw]*.bib > mega.bib && notify-send -i "Consolidate:" "Consolidating Bibliography."

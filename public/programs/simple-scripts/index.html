@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple Scripts - MacKenzieBasaraba.ca</title>
+    <link rel="canonical" href="https://mackenziebasaraba.github.io/">
+<link rel="alternate" type="application/rss+xml" title="MacKenzieBasaraba.ca's RSS Feed" href="/index.xml">
+<link rel="icon" href="/images/icon-small.png">
+<meta charset="utf-8">
+<meta name="author" content="Peter MacKenzie-Basaraba">
+<meta name="description" content=" An assortment of simple scripts I run frequently. Feel free to use and rewrite them in any way you see fit.
+bookmark A simple script to log and retrieve URLs through dmenu.
+">
+<meta name="keywords" content='Scripts'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Simple Scripts">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MacKenzieBasaraba.ca">
+<meta property="og:url" content="https://mackenziebasaraba.github.io/programs/simple-scripts/">
+
+<link rel="stylesheet" href="/style.ec4112039d7d55d24877b4aa60ecd9b2ad6dc715e45714c22255ce176a67edac.css" type="text/css" media="screen" integrity="sha256-7EESA519VdJId7SqYOzZsq1txxXkVxTCIlXOF2pn7aw=">
+
+<link rel="stylesheet" href="/print.bab2e98dde63813f7f2c0a6db018f47d2774c1a3535692024f85d5999a46e53b.css" type="text/css" media="print" integrity="sha256-7EESA519VdJId7SqYOzZsq1txxXkVxTCIlXOF2pn7aw=">
+
+  </head>
+  <body>
+    
+    <header class="site-nav">
+  <nav aria-label="Main Navigation">
+    <div class="header-image">
+      <a href="https://mackenziebasaraba.github.io/">
+        <img src="/logo.png">
+      </a>
+    </div>
+    <div class="header-information">
+      <h1><a href="https://mackenziebasaraba.github.io/">mackenziebasaraba.ca</a></h1>
+      <p>Occasional ramblings from a bored prairie-mutt.</p>
+      <ul class="header-nav"><li>
+        <a href="/blog/">Blog</a>
+    </li><li>
+        <a href="/bookshelf/">Bookshelf</a>
+    </li><li>
+        <a href="/index.xml">RSS</a>
+    </li></ul>
+
+    </div>
+  </nav>
+</header>
+
+    
+    
+<div class="prose-page">
+
+  <header>
+    <h1>Simple Scripts</h1>
+    <p class="subtitle">March 11th, 2025</p>
+  </header>
+
+  <main>
+
+    <article>
+        <section>
+<p>An assortment of simple scripts I run frequently. Feel free to use and rewrite them in any way you see fit.</p>
+</section>
+<section>
+<h2 id="bookmark">bookmark</h2>
+<p>A simple script to log and retrieve URLs through dmenu.</p>
+
+
+<figure>
+    <picture>
+        <a title="Click to enlarge the image." href="/programs/simple-scripts/bookmark.gif">
+            <img src="/programs/simple-scripts/bookmark.gif"  alt="An example of the &ndash;display argument."   title="An example of the --display command"  loading="lazy" decoding="async">
+        </a>
+    </picture>
+    <figcaption>An example of the &ndash;display command</figcaption>
+</figure><dl>
+<dt><strong>Arguments</strong></dt>
+<dd><strong>-d, &ndash;display</strong> &ndash; Display a list of saved bookmarks.</dd>
+<dd>
+<p><strong>-a, &ndash;add</strong> &ndash; Log the URL stored in the clipboard; configure title and tags.</p>
+</dd>
+</dl>
+<p><em>This script is intended to be executed through dwm.</em></p>
+<figure class="highlight special box full-width">
+  <figcaption><div style="overflow-x: scroll" class="code-title chroma bg">
+      <tt><a href="bookmark">bookmark</a></tt>
+        </div></figcaption>
+  <pre tabindex="0" class="chroma"
+    ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.local/share/bookmarks.csv&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result<span style="color:#f92672">()</span> <span style="color:#f92672">{</span> dmenu -p <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> &lt; /dev/null; <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>display_bookmarks<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    choice<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>sort -t <span style="color:#e6db74">&#39;;&#39;</span> -k 3,3 -k 1,1 -k 2,2 <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span> | sed <span style="color:#e6db74">&#34;s/;/ | /g&#34;</span> | dmenu -l <span style="color:#ae81ff">25</span> -i -p <span style="color:#e6db74">&#34;Select bookmark:&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$choice<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> firefox <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$choice<span style="color:#e6db74">&#34;</span> | cut -d <span style="color:#e6db74">&#34;|&#34;</span> -f 2<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>add_bookmark<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>xclip -o<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>result <span style="color:#e6db74">&#34;Enter bookmark title:&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    tags<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>result <span style="color:#e6db74">&#34;Enter bookmark tags:&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> grep -q <span style="color:#e6db74">&#34;^</span>$url$<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        notify-send <span style="color:#e6db74">&#34;Error!&#34;</span> <span style="color:#e6db74">&#34;You&#39;ve already bookmarked &#39;</span>$title<span style="color:#e6db74">&#39;.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        echo <span style="color:#e6db74">&#34;</span>$title<span style="color:#e6db74">;</span>$url<span style="color:#e6db74">;</span>$tags<span style="color:#e6db74">&#34;</span> &gt;&gt; <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        notify-send <span style="color:#e6db74">&#34;Bookmark added!&#34;</span> <span style="color:#e6db74">&#34;&#39;</span>$title<span style="color:#e6db74">&#39; has been bookmarked!&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>help<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  printf <span style="color:#e6db74">&#34;Usage:\n -d, --display\t Display a list of saved links.\n -a, --add\t Add a new bookmark.\n&#34;</span> ;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> in
+</span></span><span style="display:flex;"><span>    -d<span style="color:#f92672">)</span> display_bookmarks ;;
+</span></span><span style="display:flex;"><span>    --display<span style="color:#f92672">)</span> display_bookmarks ;;
+</span></span><span style="display:flex;"><span>    -a<span style="color:#f92672">)</span> add_bookmark ;;
+</span></span><span style="display:flex;"><span>    --add<span style="color:#f92672">)</span> add_bookmark ;;
+</span></span><span style="display:flex;"><span>    *<span style="color:#f92672">)</span> help ; exit <span style="color:#ae81ff">1</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span></span></span></code></pre>
+</figure>
+
+</section>
+<section>
+<h2 id="consolidatebib">consolidatebib</h2>
+<p>I&rsquo;m anal about organization&hellip; at least when it comes to my home directory; this script consolidates all Biber files within a directory into a master file, allowing me to create files for different mediums and subjects. I have this script executed whenever a Biber file is written.</p>
+<figure class="highlight special box full-width">
+  <figcaption><div style="overflow-x: scroll" class="code-title chroma bg">
+      <tt><a href="consolidatebib">consolidatebib</a></tt>
+        </div></figcaption>
+  <pre tabindex="0" class="chroma"
+    ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e"># Consolidates all bib files into a single file.</span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#f92672">[</span>abpw<span style="color:#f92672">]</span>*.bib &gt; mega.bib <span style="color:#f92672">&amp;&amp;</span> notify-send -i <span style="color:#e6db74">&#34;Consolidate:&#34;</span> <span style="color:#e6db74">&#34;Consolidating Bibliography.&#34;</span></span></span></code></pre>
+</figure>
+
+</section>
+
+    </article>
+
+  </main>
+
+</div>
+
+  </body>
+</html>

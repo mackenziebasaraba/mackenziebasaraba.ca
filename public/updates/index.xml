@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacKenzieBasaraba.ca</title>
+    <link>https://mackenziebasaraba.github.io/updates/</link>
+    <description>Recent content on MacKenzieBasaraba.ca</description>
+    <generator>Hugo</generator>
+    <language>en-ca</language>
+    <managingEditor>peter@mackenziebasaraba.ca (Peter MacKenzie-Basaraba)</managingEditor>
+    <webMaster>peter@mackenziebasaraba.ca (Peter MacKenzie-Basaraba)</webMaster>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://mackenziebasaraba.github.io/updates/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

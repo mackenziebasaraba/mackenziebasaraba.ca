@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on MacKenzieBasaraba.ca</title>
+    <link>https://mackenziebasaraba.github.io/meta/</link>
+    <description>Recent content in Meta on MacKenzieBasaraba.ca</description>
+    <generator>Hugo</generator>
+    <language>en-ca</language>
+    <managingEditor>peter@mackenziebasaraba.ca (Peter MacKenzie-Basaraba)</managingEditor>
+    <webMaster>peter@mackenziebasaraba.ca (Peter MacKenzie-Basaraba)</webMaster>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mackenziebasaraba.github.io/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://mackenziebasaraba.github.io/meta/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>peter@mackenziebasaraba.ca (Peter MacKenzie-Basaraba)</author>
+      <guid>https://mackenziebasaraba.github.io/meta/privacy/</guid>
+      <description>&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This website is not logging any data, it does not use any scripts for tracking&#xA;visitors, nor does it place any cookies on your computer.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;This site and its owner &lt;strong&gt;do not&lt;/strong&gt; collect any information on users. I have a&#xA;thousand preventative measures to resist fingerprinting on my machine; it would&#xA;be a bit hypocritical to turn around and collect user analytics. To be frank,&#xA;beyond moral qualms, this is just an elaborate explanation to avoid admitting that&#xA;I&amp;rsquo;m too much of a lazy bastard to configure and monitor a data system.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
