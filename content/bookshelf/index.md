@@ -17,7 +17,7 @@ thumbnail: 20250103-bookshelf.JPG
 
 </section>
 
-{{<section>}}
+<section>
 
 ## B: Philosophy, Psychology, Religion
 - Durant, Will -- *The Story of Philosophy: The Lives and Opinions of the Greatest Philosophers* <!--B72.D8 1933-->
@@ -391,4 +391,4 @@ thumbnail: 20250103-bookshelf.JPG
 - Muhammad, Elijah -- *Yakun (Jacob): Father of Mankind*
 - Schertel, Ernst -- *Magic: History / Theory / Practice*
 
-{{</section>}}
+</section>
