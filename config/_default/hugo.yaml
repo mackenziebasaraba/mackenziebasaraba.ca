@@ -1,5 +1,5 @@
 title: MacKenzieBasaraba.ca
-baseURL: https://mackenziebasaraba.ca
+baseURL: https://mackenziebasaraba.github.io/
 
 disableKinds:
   - taxonomy

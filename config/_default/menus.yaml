@@ -1,16 +1,20 @@
 main:
-  - name: Articles and Essays
-    pageRef: Articles and Essays
-    url: /writings/
+  - name: Blog
+    pageRef: blog
+    url: /posts/
     weight: 20
-  - name: Projects
-    pageRef: Projects
-    url: /projects/
-    weight: 30
-  - name: About
-    pageRef: about
-    url: /about/
-    weight: 50
+    #  - name: Projects
+    #    pageRef: Projects
+    #    url: /projects/
+    #    weight: 30
+  - name: Bookshelf
+    pageRef: bookshelf
+    url: /bookshelf/
+    weight: 40
+    #  - name: About
+    #    pageRef: about
+    #    url: /about/
+    #    weight: 50
   - name: RSS
     pageRef: rss
     url: /index.xml
