@@ -54,7 +54,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: mackenziebasaraba/fonts
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           path: fonts
       - name: Setup Pages
         id: pages
