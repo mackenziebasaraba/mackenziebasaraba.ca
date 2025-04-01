@@ -42,11 +42,17 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      - name: Checkout
+      - name: Checkout Hugo site repository
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
+      - name: Checkout font repository
+        uses: actions/checkout@v4
+        with:
+          repository: mackenziebasaraba/fonts
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: fonts
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
