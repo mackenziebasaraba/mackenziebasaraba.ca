@@ -8,8 +8,8 @@
 {{- if $image -}}
 <figure{{ with $class }} class="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}>
     <picture>
-        <a title="Click to enlarge the image." href="{{ $image.RelPermalink }}">
-            <img src="{{ with $small }}{{ .RelPermalink }}{{ else }}{{ $image.RelPermalink }}{{ end }}" {{ if .Text }} alt="{{ .Text }}" {{ end }} {{ if .Title }} title="{{ .Title }}" {{ end }} loading="lazy" decoding="async">
+        <a title="Click to enlarge the image." href="{{ $image.Permalink }}">
+            <img src="{{ with $small }}{{ .Permalink }}{{ else }}{{ $image.Permalink }}{{ end }}" {{ if .Text }} alt="{{ .Text }}" {{ end }} {{ if .Title }} title="{{ .Title }}" {{ end }} loading="lazy" decoding="async">
         </a>
     </picture>
     <figcaption>{{ .Title | markdownify  }}</figcaption>

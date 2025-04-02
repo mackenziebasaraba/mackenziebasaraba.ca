@@ -12,6 +12,6 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{ $css := resources.Get "style.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" type="text/css" media="screen" integrity="{{ $css.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $css.Permalink }}" type="text/css" media="screen" integrity="{{ $css.Data.Integrity }}">
 {{ $print := resources.Get "print.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $print.RelPermalink }}" type="text/css" media="print" integrity="{{ $css.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $print.Permalink }}" type="text/css" media="print" integrity="{{ $css.Data.Integrity }}">
