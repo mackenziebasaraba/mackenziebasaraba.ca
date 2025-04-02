@@ -3,16 +3,17 @@
   margin-left: auto;
   margin-right: auto;
   padding-left: 12.5%;
-  max-width: 1400px;
+  max-width: 1300px;
   counter-reset: sidenote-counter;
 
   article {
-    padding: 5rem 0rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
   }
 
   section {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   blockquote > p {
@@ -22,6 +23,7 @@
 
   h1 {
     width: 75%;
+    padding-top: 5rem;
   }
 
   h2, h3 {
@@ -131,10 +133,16 @@
   }
 }
 
-@media (max-width: 1200px) {
+
+
+@media (max-width: 1300px) {
   .prose-page {
-    width: 100%;
+    width: 95%;
     padding-left: 5%;
+
+    h1, h2, h3 {
+      width: 100%;
+    }
   }
 }
 
@@ -143,10 +151,6 @@
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;
-
-    h1, h2, h3 {
-      width: 100%;
-    }
 
     hr,
     section > p,
@@ -159,7 +163,7 @@
       width: 97%
     }
 
-    section > dl,
+    section > dd,
     section > ol,
     section > ul {
       width: 90%;
