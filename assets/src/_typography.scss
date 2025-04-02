@@ -58,6 +58,14 @@ caption, tbody, tfoot, thead, tr, th, td {
   @include normal-text;
 }
 
+p, li, dd, blockquote {
+  hyphens: auto;
+  hyphenate-limit-chars: 10 3 4;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 4;
+  -ms-hyphenate-limit-chars: 10 3 4;
+}
+
 strong, dt {
   font-weight: bold;
   color: var(--header-text);
