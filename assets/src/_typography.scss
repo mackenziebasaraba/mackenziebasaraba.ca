@@ -5,7 +5,7 @@
 }
 
 @mixin normal-text {
-  font-size: #{fluid(16px, 19px)};
+  font-size: #{fluid(16px, 18px)};
 }
 
 @mixin small-text {
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: #{fluid(24px, 40px)};
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-family: var(--header-font);
   font-weight: normal;
 }
@@ -40,6 +40,17 @@ h2 {
 h3 {
   font-size: #{fluid(18.3154px, 21.9219px)};
   margin-top: 2rem;
+}
+
+a.heading-anchor {
+  display: none;
+  visibility: collapse;
+}
+
+h2:hover > a.heading-anchor,
+h3:hover > a.heading-anchor {
+  display: inline;
+  visibility: visible;
 }
 
 p, blockquote, del, dfn, q, dl, dt, dd, ol, ul, li, label, legend, table,
@@ -81,4 +92,17 @@ figcaption,
 .marginnote,
 .table-of-contents {
   @include small-text;
+}
+
+.new-thought {
+  font-family: var(--header-font);
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: #{fluid(20.9659px, 26.6983px)};
+  display: block;
+  line-height: 1;
 }
