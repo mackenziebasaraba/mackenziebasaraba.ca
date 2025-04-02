@@ -143,6 +143,7 @@ $serif-fonts: "Noto Serif SC", Palatino, "Palatino Linotype", "Palatino LT STD",
     --header-font: valkyrie_a_caps, #{$serif-fonts};
     --paragraph-font: valkyrie_a, #{$serif-fonts};
     --tab-font: valkyrie_a_tabs, monospace;
+    --code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace, "Noto Emoji";
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -150,5 +151,6 @@ $serif-fonts: "Noto Serif SC", Palatino, "Palatino Linotype", "Palatino LT STD",
     --header-font: valkyrie_b_caps, #{$serif-fonts};
     --paragraph-font: valkyrie_b, #{$serif-fonts};
     --tab-font: valkyrie_b_tabs, monospace;
+    --code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace, "Noto Emoji";
   }
 }
