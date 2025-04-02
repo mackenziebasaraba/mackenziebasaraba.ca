@@ -1,17 +1,5 @@
 @use "functions" as *;
 
-picture {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-img {
-  max-height: 95vh;
-  height: auto;
-  max-width: 100%;
-  width: auto;
-}
-
 video {
   max-height: 80vh;
   width: auto;
@@ -42,12 +30,9 @@ video {
     padding-left: #{fluid(16px, 18px)};
   }
   .side-by-side {
-    max-width: 1440px;
+    max-width: 55%;
     display: flex;
     gap: #{fluid(16px, 18px)};
-    img {
-      max-height: 800px;
-    }
   }
   .big-image {
     max-width: 1440px;
