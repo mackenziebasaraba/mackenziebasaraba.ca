@@ -15,9 +15,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  # Add access to the private repository
-  pull-requests: write
-  actions: read
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -45,18 +42,11 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      - name: Checkout Hugo site repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Checkout font repository
-        uses: actions/checkout@v4
-        with:
-          repository: mackenziebasaraba/fonts
-          token: ${{ secrets.PAT_TOKEN }}
-          path: fonts
-          ref: main
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
