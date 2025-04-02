@@ -1,21 +1,30 @@
 @use "functions" as *;
 
-.highlight {
+figure.highlight {
   font-family: var(--code-font);
   overflow-x: scroll;
   border: solid 2px var(--body-text);
+  text-align: left;
+  figcaption {
+    max-width: 100%;
+  }
+
   .chroma {
     padding: 0.5rem;
   }
+
   .code-title {
     text-align: left;
     font-family: monospace;
     font-weight: bold;
     font-style: italic;
     border-bottom: solid 2px var(--body-text);
+    max-width: 100%;
+
     a {
       color: #ebdbb2;
     }
+
     tt {
       font-size: #{fluid(12px, 15px)};
     }
