@@ -136,17 +136,19 @@
   src: url('/fonts/valkyrie/valkyrie_b_tab_regular.woff2') format('woff2');
 }
 
+$serif-fonts: "Noto Serif SC", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif, "Noto Emoji";
+
 @media (prefers-color-scheme: light) {
   :root {
-    --header-font: valkyrie_a_caps, serif;
-    --paragraph-font: valkyrie_a, serif;
+    --header-font: valkyrie_a_caps, #{$serif-fonts};
+    --paragraph-font: valkyrie_a, #{$serif-fonts};
     --tab-font: valkyrie_a_tabs, monospace;
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --header-font: valkyrie_b_caps, serif;
-    --paragraph-font: valkyrie_b, serif;
+    --header-font: valkyrie_b_caps, #{$serif-fonts};
+    --paragraph-font: valkyrie_b, #{$serif-fonts};
     --tab-font: valkyrie_b_tabs, monospace;
   }
 }
