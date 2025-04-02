@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+file="$HOME/.local/share/bookmarks.csv"
+
+result() { dmenu -p "$1" < /dev/null; }
+
+display_bookmarks() {
+    choice=$(sort -t ';' -k 3,3 -k 1,1 -k 2,2 "$file" | sed "s/;/ | /g" | dmenu -l 25 -i -p "Select bookmark:")
+    [ -n "$choice" ] && firefox "$(echo "$choice" | cut -d "|" -f 2)"
+}
+
+add_bookmark() {
+    url="$(xclip -o)"
+    title="$(result "Enter bookmark title:")"
+    tags="$(result "Enter bookmark tags:")"
+
+    if grep -q "^$url$" "$file"; then
+        notify-send "Error!" "You've already bookmarked '$title'."
+    else
+        echo "$title;$url;$tags" >> "$file"
+        notify-send "Bookmark added!" "'$title' has been bookmarked!"
+    fi
+}
+
+help() {
+  printf "Usage:\n -d, --display\t Display a list of saved links.\n -a, --add\t Add a new bookmark.\n -h, --help\t Returns this menu.\n" ;
+}
+
+case "$1" in
+    -d) display_bookmarks ;;
+    --display) display_bookmarks ;;
+    -a) add_bookmark ;;
+    --add) add_bookmark ;;
+    -h) help ;;
+    --help) help ;;
+    *) help ; exit 1 ;;
+esac
