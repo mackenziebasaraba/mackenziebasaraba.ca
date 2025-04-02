@@ -2,11 +2,11 @@
 {{- if isset .Attributes "verbatim" -}}
   {{- $isVerbatim = .Attributes.verbatim -}}
 {{- end -}}
-<figure class="highlight special box">
+<figure class="highlight special box full-width">
 {{- with .Attributes.title }}
   <figcaption>
     {{- if $isVerbatim -}}
-        <div style="overflow-x: scroll" class="code-title chroma bg">
+        <div style="overflow-x: scroll" class="code-title chroma bg full-width">
       <tt>{{ . | markdownify }}</tt>
         </div>
     {{- else -}}
