@@ -1,0 +1,14 @@
+{{- $cite := .Attributes.cite -}}
+{{- $author := .Attributes.author -}}
+{{- $details := .Attributes.details -}}
+
+<blockquote{{ with $cite }} cite="{{ . }}"{{ end }}>
+  {{ .Text }}
+  {{- if or $author $cite $details }}
+  <footer>
+    {{- with $author -}}{{ . }}{{- end -}}
+    {{- with $cite -}}, <cite>{{ . | markdownify }}</cite>{{- end -}}
+    {{- with $details -}}, {{ . | markdownify }}{{- end -}}
+  </footer>
+  {{- end -}}
+</blockquote>

@@ -77,10 +77,6 @@ em, blockquote, cite {
 
 a {
   color: var(--hyperlink);
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .external {
@@ -98,7 +94,8 @@ figure {
 figcaption,
 .sidenote,
 .marginnote,
-.table-of-contents {
+.table-of-contents,
+blockquote footer {
   @include small-text;
 }
 

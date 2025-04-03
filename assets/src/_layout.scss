@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-left: 12.5%;
-  max-width: 1300px;
+  max-width: 1400px;
   counter-reset: sidenote-counter;
 
   article {
@@ -16,11 +16,6 @@
     padding-bottom: 1rem;
   }
 
-  blockquote > p {
-    width: 55%;
-    margin-right: 40px;
-  }
-
   h1 {
     width: 75%;
     padding-top: 5rem;
@@ -30,17 +25,26 @@
     width: 55%;
   }
 
-  section > p,
-  section > table {
+  p,
+  table {
     width: 55%;
   }
 
-  section > dl,
-  section > ol,
-  section > ul {
+  dl,
+  ol,
+  ul,
+  blockquote {
     width: 50%;
     -webkit-padding-start: 5%;
     padding-inline-start: 5%;
+  }
+
+  blockquote p {
+    width: 100%;
+  }
+
+  blockquote footer {
+    text-align: right !important;
   }
 
   dt:not(:first-child),
@@ -64,8 +68,8 @@
     margin-right: auto;
   }
 
-  section > img {
-    width: 100%;
+  img {
+    max-width: 100%;
   }
 
   .sidenote,
@@ -135,7 +139,7 @@
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .prose-page {
     width: 95%;
     padding-left: 5%;
@@ -153,9 +157,9 @@
     padding-right: 10%;
 
     hr,
-    section > p,
-    section > footer,
-    section > table {
+    p,
+    footer,
+    table {
       width: 100%;
     }
 
@@ -163,9 +167,10 @@
       width: 97%
     }
 
-    section > dd,
-    section > ol,
-    section > ul {
+    dd,
+    ol,
+    ul,
+    blockquote {
       width: 90%;
     }
 
