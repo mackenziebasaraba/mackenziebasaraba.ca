@@ -94,6 +94,8 @@ figure {
 figcaption,
 .sidenote,
 .marginnote,
+label.marginnote-ind,
+label.sidenote-number,
 .table-of-contents,
 blockquote footer {
   @include small-text;
