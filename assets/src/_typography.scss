@@ -5,11 +5,11 @@
 }
 
 @mixin normal-text {
-  font-size: #{fluid(16px, 19px)};
+  font-size: #{fluid(16px, 21.011px)};
 }
 
 @mixin small-text {
-  font-size: #{fluid(12px, 14px)};
+  font-size: #{fluid(12px, 16.509px)};
   line-height: 1.4;
 }
 
@@ -26,19 +26,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: #{fluid(24px, 40px)};
+  font-size: #{fluid(24px, 48.026px)};
   margin-top: 2rem;
   font-family: var(--header-font);
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: #{fluid(20.9659px, 26.6983px)};
+  font-size: #{fluid(20.9659px, 33.018px)};
   margin-top: 2.2rem;
 }
 
 h3 {
-  font-size: #{fluid(18.3154px, 21.9219px)};
+  font-size: #{fluid(18.3154px, 25.514px)};
   margin-top: 2rem;
 }
 
@@ -51,6 +51,10 @@ h2:hover > a.heading-anchor,
 h3:hover > a.heading-anchor {
   display: inline;
   visibility: visible;
+}
+
+.subtitle {
+  font-size: #{fluid(20.9659px, 27.014px)};
 }
 
 p, blockquote, del, dfn, q, dl, dt, dd, ol, ul, li, label, legend, table,
