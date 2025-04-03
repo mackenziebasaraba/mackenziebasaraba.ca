@@ -1,13 +1,12 @@
-
-
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #f7f7f7;
-    --body-text: #1a1a1a;
-    --header-text: #292b2f;
+    --background: #fffff8;
+    --body-text: #111;
+    --header-text: #111;
     --disclaimerColour: #8a8d91;
     --green: #ACAF50;
-    --hyperlink: #b22222;
+    --hyperlink: #111;
+    --nav-background: #b7bfc5;
   }
 }
 
@@ -15,7 +14,7 @@
   :root {
     --background: #181818;
     --body-text: #e1e1e1;
-    --header-text: #d1d1d1;
+    --header-text: #F8F8FF;
     --disclaimerColour: #a6a6a6;
     --green: #4CAF50;
     --hyperlink: #e94e77;
