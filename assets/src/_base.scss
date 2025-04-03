@@ -1,7 +1,5 @@
 @use "functions" as *;
 
-$main-width: 720px;
-
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,7 +29,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, ol, ul, dl, hr,
 figure, blockquote, footer, video, details {
-  margin-bottom: #{fluid(16px, 18px)};
+  margin-bottom: #{fluid(16px, 19px)};
 }
 
 body {

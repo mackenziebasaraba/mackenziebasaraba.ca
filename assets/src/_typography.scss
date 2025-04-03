@@ -5,7 +5,7 @@
 }
 
 @mixin normal-text {
-  font-size: #{fluid(16px, 21.011px)};
+  font-size: #{fluid(16px, 20px)};
 }
 
 @mixin small-text {
@@ -51,10 +51,6 @@ h2:hover > a.heading-anchor,
 h3:hover > a.heading-anchor {
   display: inline;
   visibility: visible;
-}
-
-.subtitle {
-  font-size: #{fluid(20.9659px, 27.014px)};
 }
 
 p, blockquote, del, dfn, q, dl, dt, dd, ol, ul, li, label, legend, table,
@@ -114,7 +110,7 @@ figcaption,
   font-style: italic;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: #{fluid(20.9659px, 26.6983px)};
+  font-size: #{fluid(16px, 20px)};
   display: block;
   line-height: 1;
 }
