@@ -17,12 +17,10 @@
   }
 
   h1 {
-    width: 75%;
     padding-top: 5rem;
   }
 
   h2, h3 {
-    width: 55%;
   }
 
   p,
@@ -30,7 +28,7 @@
     width: 55%;
   }
 
-  dl,
+  dd,
   ol,
   ul,
   blockquote {
@@ -39,8 +37,13 @@
     padding-inline-start: 5%;
   }
 
+  blockquote {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   blockquote p {
-    width: 100%;
+    width: 95%;
   }
 
   blockquote footer {
@@ -76,12 +79,10 @@
   .marginnote {
     float: right;
     clear: right;
-    margin-right: -60%;
+    margin-right: -75%;
     width: 50%;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.1rem;
-    line-height: 1.3;
     vertical-align: baseline;
     position: relative;
   }
@@ -91,7 +92,7 @@
     font-family: et-book-roman-old-style, "Noto Emoji";
     font-weight: bold;
     position: relative;
-    vertical-align: baseline;
+    vertical-align: top;
     user-select: none;
   }
 
@@ -101,15 +102,9 @@
 
   label.marginnote-ind,
   label.sidenote-number {
-    top: -0.5rem;
-    left: 0.1rem;
+    top: 0rem;
+    display: inline;
   }
-
-  span.marginnote-ind,
-  span.sidenote-number {
-    font-size: 1.1rem;
-  }
-
 
   blockquote .sidenote,
   blockquote .marginnote {

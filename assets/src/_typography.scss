@@ -6,10 +6,11 @@
 
 @mixin normal-text {
   font-size: #{fluid(16px, 20px)};
+  line-height: 1.65;
 }
 
 @mixin small-text {
-  font-size: #{fluid(12px, 16.509px)};
+  font-size: #{fluid(12px, 16px)};
   line-height: 1.4;
 }
 
@@ -27,19 +28,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: #{fluid(24px, 48.026px)};
-  margin-top: 2rem;
+  margin-top: #{fluid(24px, 48.026px)};
+  margin-bottom: #{fluid(24px, 48.026px)};
   font-family: var(--header-font);
   font-weight: bold;
 }
 
 h2 {
   font-size: #{fluid(20.9659px, 33.018px)};
-  margin-top: 2.2rem;
+  margin-top: #{fluid(20.9659px, 33.018px)};
+  margin-bottom: #{fluid(20.9659px, 33.018px)};
 }
 
 h3 {
   font-size: #{fluid(18.3154px, 25.514px)};
-  margin-top: 2rem;
+  margin-top: #{fluid(18.3154px, 25.514px)};
+  margin-bottom: #{fluid(18.3154px, 25.514px)};
 }
 
 a.heading-anchor {
@@ -71,7 +75,7 @@ strong, dt {
   color: var(--header-text);
 }
 
-em, blockquote, cite {
+em, blockquote {
   font-style: italic;
 }
 
@@ -85,6 +89,10 @@ a {
 
 blockquote {
   font-style: italic;
+}
+
+blockquote footer {
+  font-style: normal;
 }
 
 figure {
@@ -102,7 +110,7 @@ blockquote footer {
 }
 
 .new-thought {
-  font-family: var(--header-font);
+  font-variant: small-caps;
 }
 
 .subtitle {

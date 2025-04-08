@@ -19,17 +19,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 html, body {
   text-rendering: optimizeLegibility;
-  font-feature-settings: 'kern';
-  font-kerning: normal;
 }
 
 body {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p, ol, ul, dl, hr,
-figure, blockquote, footer, video, details {
-  margin-bottom: #{fluid(16px, 19px)};
+p, ol, ul, dl, hr,
+figure, footer, video, details {
+  margin-top: #{fluid(16px, 20px)};
+  margin-bottom: #{fluid(16px, 20px)};
 }
 
 body {
