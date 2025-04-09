@@ -1,0 +1,9 @@
+<p class="info gitinfo" data-pagefind-ignore>
+	{{- if .GitInfo -}}
+  This page was last edited on {{ (.GitInfo.AuthorDate).Format "2006-01-02" }} at {{ (time .GitInfo.AuthorDate "America/Edmonton").Local | time.Format "15:04:05" | upper }} <abbr text="Mountain Daylight Time">MDT</abbr>.<br />
+  Latest commit (<a href="https://github.com/mackenziebasaraba/mackenziebasaraba.ca/commit/{{ .GitInfo.Hash }}" title="Latest commit for this page" rel="noopener"><code>{{ .GitInfo.AbbreviatedHash }}</code></a>) by {{ .GitInfo.AuthorName }}.<br />
+  <a href="https://github.com/mackenziebasaraba/mackenziebasaraba.ca/commits/main/content/{{ .File.Path }}" title="This page’s commit history">Page history</a> of <span style="font-variant:small-caps">{{ .Title | title }}.
+	{{- else -}}
+		<em>[No commits yet for this page.]</em>
+	{{- end -}}
+</p>
