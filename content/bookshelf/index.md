@@ -112,7 +112,7 @@ thumbnail: 20250103-bookshelf.JPG
 - Haidt, Jonathan -- *The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness* <!--HQ792.U5 H23-->
 - Brooks, David -- *The Social Animal: Hidden Sources of Love, Character and Achievement* <!--HQ801.B76-->
 - Bly, Robert -- *Iron John: A Book About Men* <!--HQ1090.B59-->
-- Sutherland, Gillian -- *In Search of thechie New Woman: Middle-Class Women and Work in Britain 1870-1914* <!--HQ1593-->
+- Sutherland, Gillian -- *In Search of the New Woman: Middle-Class Women and Work in Britain 1870-1914* <!--HQ1593-->
 - De Beauvoir, Simone -- *The Second Sex* <!--HQ1208.B352-->
 - Ohler, Norman -- *Blitzed: Drugs in Nazi Germany* <!--HV5840.G3 O45-->
 - Carrol, Rory -- *Killing Thatcher: The IRA, the Manhunt and the Long War on the Crown* <!--HV6433.G713 C377-->
