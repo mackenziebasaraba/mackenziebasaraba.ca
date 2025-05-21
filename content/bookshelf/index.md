@@ -4,7 +4,6 @@ headerimage: true
 draft: false
 layout: ""
 tags:
-- inventory
 - literature
 title: Bookshelf
 subtitle: Little more than rationalized hoarding
@@ -24,6 +23,7 @@ thumbnail: 20250103-bookshelf.JPG
 - Seneca -- *On the Shortness of Life* <!--B616.D5 E5-->
 - Sartre, Jean-Paul -- *Being and Nothingness* <!--B819.S272 1943-->
 - Źiźek, Slavoj -- *The Sublime Object of Ideology* <!--B823.3.Z59 1989-->
+- Land, Nick -- *Fanged Noumena: Collected Writings 1987--2007* <!--B828.3.L37 2012-->
 - Nietzsche, Friedrich -- *Thus Spoke Zarathustra* <!--B3313.A45 E5-->
 - Nietzsche, Friedrich -- *Beyond Good and Evil* <!--B3313.J43 E5-->
 - Nietzsche, Friedrich -- *The Gay Science* <!--B3313.F72 E5-->
@@ -44,6 +44,7 @@ thumbnail: 20250103-bookshelf.JPG
 - Driver, Julia -- *Ethics: The Fundamentals* <!--BJ71.D75-->
 - Veyne, Paul -- *Did the Greeks Believe in Their Myths?: An Essay on the Constitutive Imagination* <!--BL782.V4713-->
 - Gray, John -- *Seven Types of Atheism* <!--BL2747.G68-->
+- Khattab, Mustafa -- *The Clear Quran: A Thematic English Translation of the Messages of the Final Revelation* <!--BP166.Q7313 2016-->
 - Muhammad, Elijah -- *Yakub (Jacob): Father of Mankind* <!--BP223.Y35-->
 - Saint Augustine -- *The Confessions of St. Augustine of Hippo* <!--BR65.A6-->
 - Kierkegaard, Søren -- *Fear and Trembling and The Sickness Unto Death* <!--BR100.K52-->
