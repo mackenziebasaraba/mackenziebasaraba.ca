@@ -88,6 +88,7 @@ thumbnail: 20250103-bookshelf.JPG
 - Sartre, Jean-Paul -- *Anti-Semite and Jew: An Exploration of The Etiology of Hate* <!--DS145.S272-->
 - Mao, Tse-Tung -- *Quotations from Chairman Mao Tse-Tung: The Little Red Book* <!--DS778.M3 A5155-->
 - Chang, Iris -- *The Rape of Nanking: The Forgotten Holocaust of World War II* <!--DS796.N2-->
+- Clements, Jonathan -- *A Brief History of Japan: Samurai, Shōgun and Zen: The Extraordinary Story of the Rising Sun* <!--DS835.C55 2017-->
 
 ## E: History of the United States of America
 
